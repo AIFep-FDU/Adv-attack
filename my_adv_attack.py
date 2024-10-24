@@ -21,7 +21,11 @@ class MyAdvAttack():
 
         # Add random noise and init adversarial example
         X_pgd = images.clone()
-        random_noise = torch.FloatTensor(*images.shape).uniform_(-self.eps * 10, self.eps * 10).to(images.device)
+        
+        ###  补充代码，添加随机噪声
+        random_noise =  
+        ###
+        
         X_pgd = X_pgd + random_noise
         X_pgd = Variable(images.data, requires_grad=True)
 
@@ -46,7 +50,10 @@ class MyAdvAttack():
             loss = self.ce_fn(logits, labels)
             loss.backward()
             eta = self.step_size * X_pgd.grad.data.sign()               # Calculate perturbation
-            X_pgd = Variable(X_pgd.data + eta, requires_grad=True)      # Add perturbation
+            
+            ### 补充代码，添加随机噪声
+            X_pgd = Variable( , requires_grad=True) 
+            ###
 
             # Ensure the perturbation within epsilon L-inf norm and between 0 and 1
             eta = torch.nan_to_num(X_pgd.data - images.data, nan=0.0)
