@@ -18,7 +18,8 @@ https://codalab.lisn.upsaclay.fr/my/datasets/download/c0c23b23-dd43-457a-865d-49
 3. 执行evaluation.py，并对评估结果进行截图
 
 #### 补充
-可以尝试替换其他的[攻击方式](https://github.com/Harry24k/adversarial-attacks-pytorch)，选择效果最好的。
+1. 调节攻击步长和步数等超参数，来改进效果
+2. 可以尝试替换其他的[攻击方式](https://github.com/Harry24k/adversarial-attacks-pytorch)，选择效果最好的。
 
 ### 提交说明
 提交完整的my_adv_attack.py和评估结果的截图
